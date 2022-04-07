@@ -16,7 +16,8 @@
                             (or cmd this-command))
                     nil
                     (concat emacs-logging/log-directory now ".log")
-                    'append))))
+                    'append
+                    'silent))))
 
 (add-hook 'pre-command-hook 'emacs-logging/log-command)
 
@@ -39,7 +40,8 @@
                               difference)
                       nil
                       (concat emacs-logging/log-directory "slow.log")
-                      'append)))))
+                      'append
+                      'silent)))))
 
 (add-hook 'pre-command-hook 'emacs-logging/log-slow-commands-before)
 
